@@ -44,9 +44,9 @@ alias grep='grep --color=auto'
 setopt autopushd
 
 RPROMPT='%B%F{red}%*%f%b'
-PROMPT='%B%? %F{green}%~%#%b%f '
+PROMPT='%B%? %F{blue}%m%f %F{green}%~%#%b%f '
 
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 if [ "TEST$(echo $PATH | grep -o $HOME/.local/bin)" = "TEST" ]; then
 	export PATH="$PATH:$HOME/.local/bin"
 fi
@@ -54,7 +54,7 @@ if [ "TEST$(echo $PATH | grep -o $HOME/bin)" = "TEST" ]; then
 	export PATH="$PATH:$HOME/bin"
 fi
 
-alias snrcmm='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /multimon'
-alias snrc='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /f'
-alias snrcup='nmcli con up id SNRC'
-alias snrcdown='nmcli con down id SNRC'
+#alias snrcmm='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /multimon'
+#alias snrc='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /f'
+#alias snrcup='nmcli con up id SNRC'
+#alias snrcdown='nmcli con down id SNRC'
