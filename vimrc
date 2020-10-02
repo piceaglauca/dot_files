@@ -4,6 +4,8 @@ set ts=4 " tab stop
 set sw=4 " shift width
 set expandtab
 
+syntax enable
+
 "autocmd BufReadPost * :silent !update_konsole_tab set 'vim: %:t'
 "autocmd VimLeavePre * :silent !update_konsole_tab clean
 
