@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IGNORE_FILES="INSTALL.sh"
+IGNORE_FILES="INSTALL.sh zsh_history"
 PWD="$(pwd)"
 
 for dotfile in ./*; do
