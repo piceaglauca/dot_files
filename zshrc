@@ -54,7 +54,16 @@ if [ "TEST$(echo $PATH | grep -o $HOME/bin)" = "TEST" ]; then
 	export PATH="$PATH:$HOME/bin"
 fi
 
-#alias snrcmm='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /multimon'
-#alias snrc='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /f'
-#alias snrcup='nmcli con up id SNRC'
-#alias snrcdown='nmcli con down id SNRC'
+alias snrcmm='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /multimon'
+alias snrc='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /f'
+alias snrcup='nmcli con up id SNRC'
+alias snrcdown='nmcli con down id SNRC'
+
+up() {
+    # default parameter to 1 if non provided
+    declare -i d=${@:-1}
+    # ensure given parameter is non-negative. Print error and return if it is
+    (( $d < 0 )) && (>&2 echo "up: Error: negative value provided") && return 1;
+    # remove last d directories from pwd, append "/" in case result is empty
+    cd "$(pwd | sed -E 's;(/[^/]*){0,'$d'}$;;')/";
+}
