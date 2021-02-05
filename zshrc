@@ -54,8 +54,10 @@ if [ "TEST$(echo $PATH | grep -o $HOME/bin)" = "TEST" ]; then
 	export PATH="$PATH:$HOME/bin"
 fi
 
-alias snrcmm='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /multimon'
-alias snrc='xfreerdp /u:scott.howard -v:10.10.200.4 /clipboard /fonts /f'
+RDESKTOP_ARGS='/u:scott.howard /clipboard /fonts /drive:transfer,/mnt/storage/transfer'
+alias snrcmm="xfreerdp -v:10.10.200.4 /multimon $RDESKTOP_ARGS"
+alias snrc="xfreerdp -v:10.10.200.4 /f $RDESKTOP_ARGS"
+alias snrcdesktop="xfreerdp -v:192.168.100.107 /f $RDESKTOP_ARGS"
 alias snrcup='nmcli con up id SNRC'
 alias snrcdown='nmcli con down id SNRC'
 
