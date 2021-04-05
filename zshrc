@@ -58,6 +58,7 @@ RDESKTOP_ARGS='/u:scott.howard /clipboard /fonts /drive:transfer,/mnt/storage/tr
 alias snrcmm="xfreerdp -v:10.10.200.4 /multimon $RDESKTOP_ARGS"
 alias snrc="xfreerdp -v:10.10.200.4 /f $RDESKTOP_ARGS"
 alias snrcdesktop="xfreerdp -v:192.168.100.107 /f $RDESKTOP_ARGS"
+alias snrcgis="xfreerdp -v:10.10.210.4 /f $RDESKTOP_ARGS"
 alias snrcup='nmcli con up id SNRC'
 alias snrcdown='nmcli con down id SNRC'
 
