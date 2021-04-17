@@ -62,6 +62,9 @@ alias snrcgis="xfreerdp -v:10.10.210.4 /f $RDESKTOP_ARGS"
 alias snrcup='nmcli con up id SNRC'
 alias snrcdown='nmcli con down id SNRC'
 
+alias tsuga='ssh -i ~/.ssh/id_rsa_lan tsuga'
+alias hatka='ssh -i ~/.ssh/id_rsa_lan hatka'
+
 up() {
     # default parameter to 1 if non provided
     declare -i d=${@:-1}
